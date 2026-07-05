@@ -2,13 +2,13 @@ const products = [
   {
     name: "Свеча «Уют»",
     price: "950 ₽",
-    img: "images/candle-cozy.jpg",
+    img: "svechi-shop1.png",
     desc: "Тёплый аромат ванили и сандала."
   },
   {
     name: "Свеча «Рассвет»",
     price: "1100 ₽",
-    img: "images/candle-dawn.jpg",
+    img: "svechi-shop2.png",
     desc: "Лёгкие ноты цитруса и жасмина."
   }
 ];
