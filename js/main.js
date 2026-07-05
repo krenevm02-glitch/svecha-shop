@@ -1,29 +1,48 @@
+// Данные товаров
 const products = [
   {
     name: "Свеча «Уют»",
     price: "950 ₽",
-    img: "svechi-shop1.png",
+    img: "svechi-shop1.png",       // Путь к файлу в корне репозитория
     desc: "Тёплый аромат ванили и сандала."
   },
   {
     name: "Свеча «Рассвет»",
     price: "1100 ₽",
-    img: "svechi-shop2.png",
+    img: "svechi-shop2.png",       // Путь к файлу в корне репозитория
     desc: "Лёгкие ноты цитруса и жасмина."
+  },
+  {
+    name: "Свеча «Вечер»",
+    price: "1050 ₽",
+    img: "svechi-shop3.png",       // Добавь этот файл в репозиторий, если есть
+    desc: "Глубокий аромат кедра и специй."
   }
 ];
 
-const grid = document.getElementById("products-grid");
-
-products.forEach(p => {
-  const card = document.createElement("article");
-  card.className = "product-card";
-  card.innerHTML = `
-    <img src="${p.img}" alt="${p.name}" loading="lazy" />
-    <h3>${p.name}</h3>
-    <p>${p.desc}</p>
-    <div><strong>${p.price}</strong></div>
-    <button class="btn" type="button">В заказ</button>
+// Функция генерации HTML карточки
+function createProductCard(product) {
+  return `
+    <div class="product-card">
+      <img src="${product.img}" alt="${product.name}" loading="lazy">
+      <div class="product-info">
+        <h3 class="product-name">\${product.name}</h3>
+        <p class="product-price">\${product.price}</p>
+        <p class="product-desc">\${product.desc}</p>
+        <button class="add-to-cart-btn">В корзину</button>
+      </div>
+    </div>
   `;
-  grid.appendChild(card);
-});
+}
+
+// Функция отрисовки всех товаров
+function renderProducts() {
+  const container = document.getElementById('products-container');
+  if (!container) return;
+
+  // Генерируем HTML для всех товаров и вставляем в контейнер
+  container.innerHTML = products.map(createProductCard).join('');
+}
+
+// Запускаем отрисовку после загрузки страницы
+document.addEventListener('DOMContentLoaded', renderProducts);
