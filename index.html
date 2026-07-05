@@ -1,64 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Свечи ручной работы | Candles Shop</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-content">
-        <a href="/" class="logo">Candles Shop</a>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#catalog">Каталог</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candles Shop — Свечи ручной работы</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="#" class="logo">Candles Shop</a>
+    <nav class="main-nav">
+      <a href="#about">О нас</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-content">
-          <h1>Свечи ручной работы из натуральных материалов</h1>
-          <p>Уют и аромат в каждом изделии.</p>
-          <a href="#catalog" class="btn">Перейти в каталог</a>
-        </div>
-      </section>
+  <!-- Главный экран (Hero) -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Свечи ручной работы из натуральных материалов</h1>
+      <p>Уют и аромат в каждом изделии.</p>
+      <a href="#catalog" class="btn">Перейти в каталог</a>
+    </div>
+  </section>
 
-      <section id="about" class="section">
-        <div class="container">
-          <h2>О нас</h2>
-          <p>Мы создаём свечи вручную, уделяя внимание каждой детали. Используем натуральные воски, безопасные ароматизаторы и экологичные фитили.</p>
-        </div>
-      </section>
+  <!-- Каталог товаров (сюда JS вставит карточки) -->
+  <section id="catalog" class="container section">
+    <h2 class="section-title">Наши свечи</h2>
+    <div id="products-container" class="products-grid"></div>
+  </section>
 
-      <section id="catalog" class="section">
-        <div class="container">
-          <h2>Каталог</h2>
-          <div class="products-grid" id="products-grid">
-            <!-- Карточки появятся автоматически -->
-          </div>
-        </div>
-      </section>
+  <!-- Секция "О нас" -->
+  <section id="about" class="section section-about">
+    <div class="container">
+      <h2 class="section-title">О нас</h2>
+      <p>
+        Мы создаём свечи вручную, уделяя внимание каждой детали. Используем натуральные воски, 
+        безопасные ароматизаторы и экологичные фитили. Наша цель — дарить тепло и уют вашему дому.
+      </p>
+    </div>
+  </section>
 
-      <section id="contacts" class="section">
-        <div class="container">
-          <h2>Контакты</h2>
-          <p>Пишите нам в Telegram или на почту — примем заказ и ответим на вопросы.</p>
-        </div>
-      </section>
-    </main>
+  <footer class="site-footer">
+    <p>&copy; 2024 Candles Shop. Все права защищены.</p>
+  </footer>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; 2024 Candles Shop. Все права защищены.</p>
-      </div>
-    </footer>
-
-   <script src="js/main.js?v=2"></script>
-  </body>
+  <script src="js/main.js?v=3"></script>
+</body>
 </html>
